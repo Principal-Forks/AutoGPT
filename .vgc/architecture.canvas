@@ -1,0 +1,518 @@
+{
+  "vv": {
+    "name": "AutoGPT Platform Architecture",
+    "version": "1.0.0",
+    "nodeTypes": {
+      "frontend": {
+        "name": "Frontend",
+        "description": "Frontend application component",
+        "category": "ui",
+        "color": "#4CAF50"
+      },
+      "rest_server": {
+        "name": "REST Server",
+        "description": "REST API server",
+        "category": "api",
+        "color": "#2196F3"
+      },
+      "websocket_server": {
+        "name": "WebSocket Server",
+        "description": "Real-time communication server",
+        "category": "communication",
+        "color": "#FF9800"
+      },
+      "executor": {
+        "name": "Executor",
+        "description": "AI agent execution service",
+        "category": "execution",
+        "color": "#9C27B0"
+      },
+      "scheduler_server": {
+        "name": "Scheduler Server",
+        "description": "Task scheduling service",
+        "category": "scheduling",
+        "color": "#9C27B0"
+      },
+      "database_manager": {
+        "name": "Database Manager",
+        "description": "Database operations service",
+        "category": "data",
+        "color": "#607D8B"
+      },
+      "notification_server": {
+        "name": "Notification Server",
+        "description": "Notification service",
+        "category": "communication",
+        "color": "#FF9800"
+      },
+      "redis": {
+        "name": "Redis Cache",
+        "description": "In-memory cache storage",
+        "category": "cache",
+        "color": "#E91E63"
+      },
+      "rabbitmq": {
+        "name": "RabbitMQ",
+        "description": "Message broker",
+        "category": "messaging",
+        "color": "#795548"
+      },
+      "db": {
+        "name": "Database",
+        "description": "Database storage",
+        "category": "database",
+        "color": "#3F51B5"
+      },
+      "kong": {
+        "name": "Kong Gateway",
+        "description": "API gateway",
+        "category": "gateway",
+        "color": "#00BCD4"
+      },
+      "auth": {
+        "name": "Auth Service",
+        "description": "Authentication service",
+        "category": "auth",
+        "color": "#F44336"
+      },
+      "clamav": {
+        "name": "ClamAV",
+        "description": "Virus scanning service",
+        "category": "security",
+        "color": "#FF5722"
+      },
+      "studio": {
+        "name": "Studio",
+        "description": "Development studio",
+        "category": "development",
+        "color": "#009688"
+      },
+      "meta": {
+        "name": "Meta Service",
+        "description": "Metadata service",
+        "category": "development",
+        "color": "#009688"
+      }
+    },
+    "edgeTypes": {
+      "http_connection": {
+        "name": "HTTP Connection",
+        "description": "HTTP/HTTPS connection",
+        "category": "api",
+        "color": "#2196F3"
+      },
+      "websocket_connection": {
+        "name": "WebSocket Connection",
+        "description": "Real-time WebSocket connection",
+        "category": "realtime",
+        "color": "#FF9800"
+      },
+      "auth_flow": {
+        "name": "Authentication Flow",
+        "description": "Authentication and authorization flow",
+        "category": "auth",
+        "color": "#F44336"
+      },
+      "cache_connection": {
+        "name": "Cache Connection",
+        "description": "Cache storage connection",
+        "category": "cache",
+        "color": "#E91E63"
+      },
+      "message_queue": {
+        "name": "Message Queue",
+        "description": "Message queue connection",
+        "category": "messaging",
+        "color": "#795548"
+      },
+      "service_dependency": {
+        "name": "Service Dependency",
+        "description": "Service dependency relationship",
+        "category": "dependency",
+        "color": "#9E9E9E"
+      },
+      "database_connection": {
+        "name": "Database Connection",
+        "description": "Database connection",
+        "category": "data",
+        "color": "#607D8B"
+      },
+      "virus_scan": {
+        "name": "Virus Scan",
+        "description": "Virus scanning flow",
+        "category": "security",
+        "color": "#FF5722"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": "frontend",
+      "type": "text",
+      "x": 399,
+      "y": -68,
+      "width": 160,
+      "height": 80,
+      "text": "Frontend\nNext.js App",
+      "vv": {
+        "nodeType": "frontend",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "rest_server",
+      "type": "text",
+      "x": 400,
+      "y": 200,
+      "width": 160,
+      "height": 80,
+      "text": "REST Server\nFastAPI",
+      "vv": {
+        "nodeType": "rest_server",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "websocket_server",
+      "type": "text",
+      "x": 834,
+      "y": 199,
+      "width": 160,
+      "height": 80,
+      "text": "WebSocket Server\nReal-time",
+      "vv": {
+        "nodeType": "websocket_server",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "executor",
+      "type": "text",
+      "x": 617,
+      "y": 202,
+      "width": 160,
+      "height": 80,
+      "text": "Executor\nAI Agent Tasks",
+      "vv": {
+        "nodeType": "executor",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "scheduler_server",
+      "type": "text",
+      "x": 1240,
+      "y": 197,
+      "width": 160,
+      "height": 80,
+      "text": "Scheduler\nTask Scheduling",
+      "vv": {
+        "nodeType": "scheduler_server",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "database_manager",
+      "type": "text",
+      "x": 194,
+      "y": 434,
+      "width": 160,
+      "height": 80,
+      "text": "Database Manager\nPrisma ORM",
+      "vv": {
+        "nodeType": "database_manager",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "notification_server",
+      "type": "text",
+      "x": 1033,
+      "y": 200,
+      "width": 160,
+      "height": 80,
+      "text": "Notification Server\nAlerts",
+      "vv": {
+        "nodeType": "notification_server",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "redis",
+      "type": "text",
+      "x": 394,
+      "y": 654,
+      "width": 160,
+      "height": 80,
+      "text": "Redis\nCache Storage",
+      "vv": {
+        "nodeType": "redis",
+        "shape": "cylinder"
+      }
+    },
+    {
+      "id": "rabbitmq",
+      "type": "text",
+      "x": 814,
+      "y": 645,
+      "width": 160,
+      "height": 80,
+      "text": "RabbitMQ\nMessage Broker",
+      "vv": {
+        "nodeType": "rabbitmq",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "db",
+      "type": "text",
+      "x": -111,
+      "y": 663,
+      "width": 160,
+      "height": 80,
+      "text": "PostgreSQL\nPrimary Database",
+      "vv": {
+        "nodeType": "db",
+        "shape": "cylinder"
+      }
+    },
+    {
+      "id": "kong",
+      "type": "text",
+      "x": -592,
+      "y": 231,
+      "width": 160,
+      "height": 80,
+      "text": "Kong Gateway\nAPI Gateway",
+      "vv": {
+        "nodeType": "kong",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "auth",
+      "type": "text",
+      "x": -594,
+      "y": 438,
+      "width": 160,
+      "height": 80,
+      "text": "Supabase Auth\nAuthentication",
+      "vv": {
+        "nodeType": "auth",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "clamav",
+      "type": "text",
+      "x": -405,
+      "y": 437,
+      "width": 160,
+      "height": 80,
+      "text": "ClamAV\nVirus Scanning",
+      "vv": {
+        "nodeType": "clamav",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "studio",
+      "type": "text",
+      "x": -6,
+      "y": 434,
+      "width": 160,
+      "height": 80,
+      "text": "Supabase Studio\nDatabase Dashboard",
+      "vv": {
+        "nodeType": "studio",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "meta",
+      "type": "text",
+      "x": -199,
+      "y": 438,
+      "width": 160,
+      "height": 80,
+      "text": "Supabase Meta\nMetadata Service",
+      "vv": {
+        "nodeType": "meta",
+        "shape": "rectangle"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "frontend-to-rest",
+      "fromNode": "frontend",
+      "toNode": "rest_server",
+      "text": "HTTP API",
+      "vv": {
+        "edgeType": "http_connection"
+      }
+    },
+    {
+      "id": "frontend-to-websocket",
+      "fromNode": "frontend",
+      "toNode": "websocket_server",
+      "text": "WebSocket",
+      "vv": {
+        "edgeType": "websocket_connection"
+      }
+    },
+    {
+      "id": "rest-to-auth",
+      "fromNode": "rest_server",
+      "toNode": "auth",
+      "text": "Auth",
+      "vv": {
+        "edgeType": "auth_flow"
+      }
+    },
+    {
+      "id": "rest-to-redis",
+      "fromNode": "rest_server",
+      "toNode": "redis",
+      "text": "Cache",
+      "vv": {
+        "edgeType": "cache_connection"
+      }
+    },
+    {
+      "id": "rest-to-rabbitmq",
+      "fromNode": "rest_server",
+      "toNode": "rabbitmq",
+      "text": "Queue",
+      "vv": {
+        "edgeType": "message_queue"
+      }
+    },
+    {
+      "id": "rest-to-db-manager",
+      "fromNode": "rest_server",
+      "toNode": "database_manager",
+      "text": "Depends",
+      "vv": {
+        "edgeType": "service_dependency"
+      }
+    },
+    {
+      "id": "executor-to-rabbitmq",
+      "fromNode": "executor",
+      "toNode": "rabbitmq",
+      "text": "Queue",
+      "vv": {
+        "edgeType": "message_queue"
+      }
+    },
+    {
+      "id": "executor-to-redis",
+      "fromNode": "executor",
+      "toNode": "redis",
+      "text": "Cache",
+      "vv": {
+        "edgeType": "cache_connection"
+      }
+    },
+    {
+      "id": "scheduler-to-rabbitmq",
+      "fromNode": "scheduler_server",
+      "toNode": "rabbitmq",
+      "text": "Queue",
+      "vv": {
+        "edgeType": "message_queue"
+      }
+    },
+    {
+      "id": "scheduler-to-redis",
+      "fromNode": "scheduler_server",
+      "toNode": "redis",
+      "text": "Cache",
+      "vv": {
+        "edgeType": "cache_connection"
+      }
+    },
+    {
+      "id": "db-manager-to-db",
+      "fromNode": "database_manager",
+      "toNode": "db",
+      "text": "SQL",
+      "vv": {
+        "edgeType": "database_connection"
+      }
+    },
+    {
+      "id": "notification-to-rabbitmq",
+      "fromNode": "notification_server",
+      "toNode": "rabbitmq",
+      "text": "Queue",
+      "vv": {
+        "edgeType": "message_queue"
+      }
+    },
+    {
+      "id": "notification-to-redis",
+      "fromNode": "notification_server",
+      "toNode": "redis",
+      "text": "Cache",
+      "vv": {
+        "edgeType": "cache_connection"
+      }
+    },
+    {
+      "id": "websocket-to-redis",
+      "fromNode": "websocket_server",
+      "toNode": "redis",
+      "text": "Cache",
+      "vv": {
+        "edgeType": "cache_connection"
+      }
+    },
+    {
+      "id": "rest-to-clamav",
+      "fromNode": "rest_server",
+      "toNode": "clamav",
+      "text": "Scan",
+      "vv": {
+        "edgeType": "virus_scan"
+      }
+    },
+    {
+      "id": "frontend-to-kong",
+      "fromNode": "frontend",
+      "toNode": "kong",
+      "text": "Gateway",
+      "vv": {
+        "edgeType": "http_connection"
+      }
+    },
+    {
+      "id": "kong-to-auth",
+      "fromNode": "kong",
+      "toNode": "auth",
+      "text": "Auth",
+      "vv": {
+        "edgeType": "auth_flow"
+      }
+    },
+    {
+      "id": "studio-to-db",
+      "fromNode": "studio",
+      "toNode": "db",
+      "text": "SQL",
+      "vv": {
+        "edgeType": "database_connection"
+      }
+    },
+    {
+      "id": "meta-to-db",
+      "fromNode": "meta",
+      "toNode": "db",
+      "text": "SQL",
+      "vv": {
+        "edgeType": "database_connection"
+      }
+    }
+  ]
+}

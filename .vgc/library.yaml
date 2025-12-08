@@ -1,0 +1,192 @@
+version: "1.0.0"
+name: "AutoGPT Platform Component Library"
+
+nodeComponents:
+  # Frontend Components
+  frontend:
+    name: "Frontend"
+    description: "Next.js frontend application for the AutoGPT platform"
+    category: "ui"
+    technology: "Next.js, TypeScript"
+    ports: [3000]
+    color: "#4CAF50"
+    
+  # Backend Services
+  rest_server:
+    name: "REST Server"
+    description: "Main REST API server for handling HTTP requests"
+    category: "api"
+    technology: "Python, FastAPI"
+    ports: [8006]
+    color: "#2196F3"
+    
+  executor:
+    name: "Executor Service"
+    description: "Service responsible for executing AI agent tasks"
+    category: "execution"
+    technology: "Python"
+    ports: [8002]
+    color: "#9C27B0"
+    
+  websocket_server:
+    name: "WebSocket Server"
+    description: "Real-time communication server for live updates"
+    category: "communication"
+    technology: "Python, WebSockets"
+    ports: [8001]
+    color: "#FF9800"
+    
+  database_manager:
+    name: "Database Manager"
+    description: "Service for managing database operations and migrations"
+    category: "data"
+    technology: "Python, Prisma"
+    ports: [8005]
+    color: "#607D8B"
+    
+  scheduler_server:
+    name: "Scheduler Server"
+    description: "Task scheduling and cron job management"
+    category: "scheduling"
+    technology: "Python"
+    ports: [8003]
+    color: "#9C27B0"
+    
+  notification_server:
+    name: "Notification Server"
+    description: "Handles notifications and alerts"
+    category: "communication"
+    technology: "Python"
+    ports: [8007]
+    color: "#FF9800"
+    
+  # Infrastructure Services
+  redis:
+    name: "Redis Cache"
+    description: "In-memory caching and session storage"
+    category: "cache"
+    technology: "Redis"
+    ports: [6379]
+    color: "#E91E63"
+    
+  rabbitmq:
+    name: "RabbitMQ Message Broker"
+    description: "Message queue for asynchronous communication"
+    category: "messaging"
+    technology: "RabbitMQ"
+    ports: [5672, 15672]
+    color: "#795548"
+    
+  # Database Services
+  db:
+    name: "PostgreSQL Database"
+    description: "Primary database for the platform"
+    category: "database"
+    technology: "PostgreSQL"
+    ports: [5432]
+    color: "#3F51B5"
+    
+  # Supabase Services
+  kong:
+    name: "Kong API Gateway"
+    description: "API gateway for Supabase services"
+    category: "gateway"
+    technology: "Kong"
+    color: "#00BCD4"
+    
+  auth:
+    name: "Supabase Auth"
+    description: "Authentication and authorization service"
+    category: "auth"
+    technology: "Supabase Auth"
+    color: "#F44336"
+    
+  # Security Services
+  clamav:
+    name: "ClamAV Antivirus"
+    description: "Virus scanning service for file uploads"
+    category: "security"
+    technology: "ClamAV"
+    ports: [3310]
+    color: "#FF5722"
+    
+  # Development Tools
+  studio:
+    name: "Supabase Studio"
+    description: "Database management dashboard"
+    category: "development"
+    technology: "Supabase Studio"
+    profiles: ["local"]
+    color: "#009688"
+    
+  meta:
+    name: "Supabase Meta"
+    description: "Metadata service for Supabase"
+    category: "development"
+    technology: "Supabase"
+    color: "#009688"
+    profiles: ["local"]
+
+edgeComponents:
+  # HTTP/API Connections
+  http_connection:
+    name: "HTTP Connection"
+    description: "Standard HTTP/HTTPS connection between services"
+    category: "api"
+    protocol: "HTTP"
+    color: "#2196F3"
+    
+  websocket_connection:
+    name: "WebSocket Connection"
+    description: "Real-time WebSocket connection"
+    category: "realtime"
+    protocol: "WebSocket"
+    color: "#FF9800"
+    
+  # Database Connections
+  database_connection:
+    name: "Database Connection"
+    description: "Direct database connection"
+    category: "data"
+    protocol: "PostgreSQL"
+    color: "#607D8B"
+    
+  # Message Queue Connections
+  message_queue:
+    name: "Message Queue"
+    description: "Asynchronous message passing"
+    category: "messaging"
+    protocol: "AMQP"
+    color: "#795548"
+    
+  # Cache Connections
+  cache_connection:
+    name: "Cache Connection"
+    description: "Redis cache connection"
+    category: "cache"
+    protocol: "Redis"
+    color: "#E91E63"
+    
+  # Auth Connections
+  auth_flow:
+    name: "Authentication Flow"
+    description: "OAuth2/JWT authentication flow"
+    category: "auth"
+    protocol: "OAuth2"
+    color: "#F44336"
+    
+  # Service Dependencies
+  service_dependency:
+    name: "Service Dependency"
+    description: "General service dependency relationship"
+    category: "dependency"
+    protocol: "Internal"
+    color: "#9E9E9E"
+    
+  # Security Scanning
+  virus_scan:
+    name: "Virus Scan"
+    description: "File virus scanning flow"
+    category: "security"
+    protocol: "ClamAV"
+    color: "#FF5722"
