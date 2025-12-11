@@ -4,189 +4,153 @@ name: "AutoGPT Platform Component Library"
 nodeComponents:
   # Frontend Components
   frontend:
-    name: "Frontend"
     description: "Next.js frontend application for the AutoGPT platform"
-    category: "ui"
-    technology: "Next.js, TypeScript"
-    ports: [3000]
+    tags: ["ui", "frontend"]
     color: "#4CAF50"
+    shape: "rectangle"
     
   # Backend Services
   rest_server:
-    name: "REST Server"
     description: "Main REST API server for handling HTTP requests"
-    category: "api"
-    technology: "Python, FastAPI"
-    ports: [8006]
+    tags: ["api", "backend"]
     color: "#2196F3"
+    shape: "rectangle"
     
   executor:
-    name: "Executor Service"
     description: "Service responsible for executing AI agent tasks"
-    category: "execution"
-    technology: "Python"
-    ports: [8002]
+    tags: ["execution", "backend"]
     color: "#9C27B0"
+    shape: "rectangle"
     
   websocket_server:
-    name: "WebSocket Server"
     description: "Real-time communication server for live updates"
-    category: "communication"
-    technology: "Python, WebSockets"
-    ports: [8001]
+    tags: ["communication", "backend"]
     color: "#FF9800"
+    shape: "rectangle"
     
   database_manager:
-    name: "Database Manager"
     description: "Service for managing database operations and migrations"
-    category: "data"
-    technology: "Python, Prisma"
-    ports: [8005]
+    tags: ["data", "backend"]
     color: "#607D8B"
+    shape: "rectangle"
     
   scheduler_server:
-    name: "Scheduler Server"
     description: "Task scheduling and cron job management"
-    category: "scheduling"
-    technology: "Python"
-    ports: [8003]
+    tags: ["scheduling", "backend"]
     color: "#9C27B0"
+    shape: "rectangle"
     
   notification_server:
-    name: "Notification Server"
     description: "Handles notifications and alerts"
-    category: "communication"
-    technology: "Python"
-    ports: [8007]
+    tags: ["communication", "backend"]
     color: "#FF9800"
+    shape: "rectangle"
     
   # Infrastructure Services
   redis:
-    name: "Redis Cache"
     description: "In-memory caching and session storage"
-    category: "cache"
-    technology: "Redis"
-    ports: [6379]
+    tags: ["cache", "infrastructure"]
     color: "#E91E63"
+    shape: "cylinder"
     
   rabbitmq:
-    name: "RabbitMQ Message Broker"
     description: "Message queue for asynchronous communication"
-    category: "messaging"
-    technology: "RabbitMQ"
-    ports: [5672, 15672]
+    tags: ["messaging", "infrastructure"]
     color: "#795548"
+    shape: "rectangle"
     
   # Database Services
   db:
-    name: "PostgreSQL Database"
     description: "Primary database for the platform"
-    category: "database"
-    technology: "PostgreSQL"
-    ports: [5432]
+    tags: ["database", "infrastructure"]
     color: "#3F51B5"
+    shape: "cylinder"
     
   # Supabase Services
   kong:
-    name: "Kong API Gateway"
     description: "API gateway for Supabase services"
-    category: "gateway"
-    technology: "Kong"
+    tags: ["gateway", "infrastructure"]
     color: "#00BCD4"
+    shape: "rectangle"
     
   auth:
-    name: "Supabase Auth"
     description: "Authentication and authorization service"
-    category: "auth"
-    technology: "Supabase Auth"
+    tags: ["auth", "security"]
     color: "#F44336"
+    shape: "rectangle"
     
   # Security Services
   clamav:
-    name: "ClamAV Antivirus"
     description: "Virus scanning service for file uploads"
-    category: "security"
-    technology: "ClamAV"
-    ports: [3310]
+    tags: ["security", "infrastructure"]
     color: "#FF5722"
+    shape: "rectangle"
     
   # Development Tools
   studio:
-    name: "Supabase Studio"
     description: "Database management dashboard"
-    category: "development"
-    technology: "Supabase Studio"
-    profiles: ["local"]
+    tags: ["development", "tools"]
     color: "#009688"
+    shape: "rectangle"
     
   meta:
-    name: "Supabase Meta"
     description: "Metadata service for Supabase"
-    category: "development"
-    technology: "Supabase"
+    tags: ["development", "tools"]
     color: "#009688"
-    profiles: ["local"]
+    shape: "rectangle"
 
 edgeComponents:
   # HTTP/API Connections
   http_connection:
-    name: "HTTP Connection"
     description: "Standard HTTP/HTTPS connection between services"
-    category: "api"
-    protocol: "HTTP"
+    tags: ["api", "connection"]
     color: "#2196F3"
+    directed: true
     
   websocket_connection:
-    name: "WebSocket Connection"
     description: "Real-time WebSocket connection"
-    category: "realtime"
-    protocol: "WebSocket"
+    tags: ["realtime", "connection"]
     color: "#FF9800"
+    directed: true
     
   # Database Connections
   database_connection:
-    name: "Database Connection"
     description: "Direct database connection"
-    category: "data"
-    protocol: "PostgreSQL"
+    tags: ["data", "connection"]
     color: "#607D8B"
+    directed: true
     
   # Message Queue Connections
   message_queue:
-    name: "Message Queue"
     description: "Asynchronous message passing"
-    category: "messaging"
-    protocol: "AMQP"
+    tags: ["messaging", "connection"]
     color: "#795548"
+    directed: true
     
   # Cache Connections
   cache_connection:
-    name: "Cache Connection"
     description: "Redis cache connection"
-    category: "cache"
-    protocol: "Redis"
+    tags: ["cache", "connection"]
     color: "#E91E63"
+    directed: true
     
   # Auth Connections
   auth_flow:
-    name: "Authentication Flow"
     description: "OAuth2/JWT authentication flow"
-    category: "auth"
-    protocol: "OAuth2"
+    tags: ["auth", "connection"]
     color: "#F44336"
+    directed: true
     
   # Service Dependencies
   service_dependency:
-    name: "Service Dependency"
     description: "General service dependency relationship"
-    category: "dependency"
-    protocol: "Internal"
+    tags: ["dependency", "connection"]
     color: "#9E9E9E"
+    directed: true
     
   # Security Scanning
   virus_scan:
-    name: "Virus Scan"
     description: "File virus scanning flow"
-    category: "security"
-    protocol: "ClamAV"
+    tags: ["security", "connection"]
     color: "#FF5722"
+    directed: true
